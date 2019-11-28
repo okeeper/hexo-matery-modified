@@ -1,23 +1,8 @@
 [
 	{
-		"name": "夜曲",
+		"name": "以父之名",
 		"artist": "周杰伦",
-		"url": "/medias/music/yequ.mp3",
-		"cover": "/medias/music/avatars/yequ.jpg"
-	},{
-		"name": "一路向北",
-		"artist": "周杰伦",
-		"url": "/medias/music/yiluxiangbei.mp3",
-		"cover": "/medias/music/avatars/yiluxiangbei.jpg"
-	},{
-		"name": "来自天堂的魔鬼",
-		"artist": "邓紫棋",
-		"url": "/medias/music/tiantangdemogui.mp3",
-		"cover": "/medias/music/avatars/tiantangdemogui.jpg"
-	},{
-		"name": "倒数",
-		"artist": "邓紫棋",
-		"url": "/medias/music/daoshu.mp3",
-		"cover": "/medias/music/avatars/daoshu.jpg"
+		"url": "/medias/music/周杰伦-以父之名.mp3",
+		"cover": "/medias/music/avatars/yifuzhiming.jpg"
 	}
 ]

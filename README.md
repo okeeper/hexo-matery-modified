@@ -48,5 +48,86 @@ hexo g
 hexo d
 ```
 
+# 个性化
+### 1. 添加水印
+为了防止别人抄袭你文章，可以把所有的图片都加上水印，方法很简单。
+首先在博客根目录下新建一个watermark.py，代码如下：
+```
+# -*- coding: utf-8 -*-
+import sys
+import glob
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+
+
+def watermark(post_name):
+    if post_name == 'all':
+        post_name = '*'
+    dir_name = 'source/_posts/' + post_name + '/*'
+    for files in glob.glob(dir_name):
+        im = Image.open(files)
+        if len(im.getbands()) < 3:
+            im = im.convert('RGB')
+            print(files)
+        font = ImageFont.truetype('STSONG.TTF', max(30, int(im.size[1] / 20)))
+        draw = ImageDraw.Draw(im)
+        draw.text((im.size[0] / 2, im.size[1] / 2),
+                  u'@godweiyang', fill=(0, 0, 0), font=font)
+        im.save(files)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        watermark(sys.argv[1])
+    else:
+        print('[usage] <input>')
+```
+字体也放根目录下，自己找字体。然后每次写完一篇文章可以运行python3 watermark.py postname添加水印，如果第一次运行要给所有文章添加水印，可以运行python3 watermark.py all
+
+### 2. 添加快速评论
+注册：https://leancloud.cn/
+```yaml
+# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+valine:
+  enable: true
+  appId: ***修改成你自己的appId
+  appKey: ***修改成你自己的appKey
+  notify: false
+  verify: false
+  visitor: false
+  avatar: 'wavatar' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  pageSize: 10
+  placeholder: '来都来了，不留点啥啊！' # Comment Box placeholder
+```
+
+### 3. 给文章添加背景音乐
+在.md的markdown文件的开头添加这段代码
+```
+<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div>
+```
+
+### 4. 文章的头部属性
+```yaml
+---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg
+top: true
+cover: true
+coverImg: /images/1.jpg
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false
+mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+  - Typora
+  - Markdown
+---
+
+```
+
 # 搭建教程请参考
 [https://godweiyang.com/2018/04/13/hexo-blog/](https://godweiyang.com/2018/04/13/hexo-blog/)

@@ -3,25 +3,25 @@
 menu:
   Index:
     url: /
-    icon:
+    icon: fa-home
   Tags:
     url: /tags
-    icon:
+    icon: fa-tags
   Categories:
     url: /categories
-    icon:
+    icon: fa-bookmark
   Archives:
     url: /archives
-    icon:
+    icon: fa-archive
   About:
     url: /about
-    icon:
+    icon: fa-user-circle-o
   Friends:
     url: /friends
-    icon:
+    icon: fa-users
   Contact:
     url: /contact
-    icon:
+    icon: fa-address-book
 
 # Index cover carousel configuration.
 # 首页封面轮播图的相关配置.
@@ -44,10 +44,10 @@ dream:
 # 是否在首页显示音乐.
 music:
   enable: true
-  showTitle: false
+  showTitle: true
   title: 听听音乐
   fixed: false # 开启吸底模式
-  autoplay: true # 是否自动播放
+  autoplay: false # 是否自动播放
   theme: '#542674'
   loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
@@ -89,17 +89,17 @@ indexbtn:
   enable: true
   name: Github
   icon: fa-github-alt
-  url: https://github.com/godweiyang
+  url: https://github.com/okeeper
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  qq: 792321264
-  github: godweiyang
-  weibo: godweiyang
-  email: i@godweiyang.com
-  zhihu: godweiyang
+  qq: 610998697
+  github: okeeper
+  weibo: okeeper
+  email: zhangyue0808@qq.com
+#  zhihu: Okeeper
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -118,7 +118,7 @@ code:
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
   enable: true
-  title: 写作不易，客官能否打赏一杯奶茶？
+  title: 谢谢您！
   wechat: /medias/reward/wechat.png
   alipay: /medias/reward/alipay.jpg
 
@@ -126,7 +126,7 @@ reward:
 # minCharNumber: Approve copyright information by copying at least how many characters.
 # 是否激活复制文章时追加博客和作者的版权信息.
 copyright:
-  enable: true
+  enable: false
   minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
   description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
 
@@ -153,7 +153,7 @@ wordCount:
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
 clicklove:
-  enable: true
+  enable: false
 explosion:
   enable: false
 firework:
@@ -165,14 +165,14 @@ text:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatars/avatar.jpg
-  career: 华东师范大学 | 计算机科学与技术 | AntNLP
-  introduction: 我是华东师范大学计算机科学与技术专业2018级硕士研究生。直研进入本校计算机系攻读硕士，研究方向是深度学习与自然语言处理。我们实验室是AntNLP，欢迎大家报考！
+  career: Graduated from JVTC Software college | 程序员 | 架构师
+  introduction: 曾经在网吧敲代码被鄙视然后无视继续的苦逼程序员！
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: true
+  enable: false
   data:
     hexo-matery-modified:
       icon: fa-meetup
@@ -196,27 +196,27 @@ myProjects:
 mySkills:
   enable: true
   data:
-    Algorithm:
+    架构:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
       percent: 90%
-    C++:
+    分布式系统:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
       percent: 80%
-    Python:
+    多线程:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
       percent: 80%
-    Pytorch:
+    微服务:
       background: 'linear-gradient(to right, #951213 0%, #961117 100%)'
       percent: 75%
-    Dynet:
+    Python:
       background: 'linear-gradient(to right, #F12F12 0%, #F6464F 100%)'
-      percent: 75%
+      percent: 50%
     Java:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 50%
-    SQL:
+      percent: 90%
+    数据库:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 50%
+      percent: 70%
     HTML:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
       percent: 45%
@@ -225,7 +225,7 @@ mySkills:
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myGallery:
-  enable: false
+  enable: true
   data:
     - /medias/featureimages/2.jpg
     - /medias/featureimages/5.jpg
@@ -238,13 +238,13 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: true
-  owner: godweiyang
-  repo: godweiyang.github.io
+  enable: false
+  owner: okeeper
+  repo: okeeper.github.io
   oauth:
     clientId: 
     clientSecret: 
-  admin: godweiyang
+  admin: okeeper
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
@@ -273,20 +273,20 @@ livere:
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: true
-  appId: 
-  appKey: 
+  appId: STBldAQJtVSJkhjqcYgjtmPL-gzGzoHsz
+  appKey: FnIMnsXhTkXVXQuzykLukEgQ
   notify: false
   verify: false
   visitor: false
   avatar: 'wavatar' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: '如果你没有GitHub账号，还可以在这里评论啦！' # Comment Box placeholder
+  placeholder: '来都来了，不留点啥啊！' # Comment Box placeholder
 
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/godweiyang
+  url: https://github.com/okeeper
   title: Fork Me
 
 # The password verification feature of read post. To use this feature,
@@ -401,10 +401,10 @@ featureImages:
   # noreprint（不允许转载 not allowed to reprint）
   # pay（付费转载 pay for reprinting）
 reprint:
-  enable: true # whether enable reprint section 是否启用“转载规则限定模块”
+  enable: false # whether enable reprint section 是否启用“转载规则限定模块”
   default: cc_by
 
 
 # 雪花特效
 snow:
-  enable: false
+  enable: true
