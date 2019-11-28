@@ -238,23 +238,24 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: false
+  enable: true
   owner: okeeper
   repo: okeeper.github.io
   oauth:
-    clientId: 
-    clientSecret: 
+    clientId: ac537cb9fe0e733330eb
+    clientSecret: b3c9fa63fd196e83158a79b40dfe97529bd09de0
   admin: okeeper
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
 gitment:
   enable: false
-  owner:
-  repo:
+  owner: okeeper
+  repo: okeeper.github.io
   oauth:
-    clientId:
-    clientSecret:
+    clientId: ac537cb9fe0e733330eb
+    clientSecret: b3c9fa63fd196e83158a79b40dfe97529bd09de0
+    lazy: true
 
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
