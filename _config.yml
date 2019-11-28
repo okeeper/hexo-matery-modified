@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Okeeper的博客
-subtitle: okeeper
+title: 张跃的博客
+subtitle: Okeeper
 description: 张跃 | 软件工程 | Java老司机
 keywords: "张跃 zhangyue okeeper Java Alibaba"
 author: 张跃
@@ -46,8 +46,8 @@ highlight:
   tab_replace:
 
 prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'
+  mode: 'realtime'    # realtime/preprocess
+  theme: 'okaidia'
   line_number: true    # default false
   custom_css:
 
