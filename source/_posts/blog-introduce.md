@@ -74,7 +74,7 @@ hexo d
 ### 1. 添加水印
 为了防止别人抄袭你文章，可以把所有的图片都加上水印，方法很简单。
 首先在博客根目录下新建一个watermark.py，代码如下：
-```
+```python
 # -*- coding: utf-8 -*-
 import sys
 import glob

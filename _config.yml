@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 张跃的博客
+title: Okeeper的博客
 subtitle: okeeper
-description: 野路子程序员 | 软件工程 | Java老司机
+description: 张跃 | 软件工程 | Java老司机
 keywords: "张跃 zhangyue okeeper Java Alibaba"
 author: 张跃
 language: zh-CN
@@ -41,7 +41,7 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace:
 
