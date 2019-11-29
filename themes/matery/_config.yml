@@ -410,3 +410,7 @@ reprint:
 # 雪花特效
 snow:
   enable: true
+
+# 激活网页时变换网页标题
+visibilitychange:
+  enable: false
