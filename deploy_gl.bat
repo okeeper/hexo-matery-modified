@@ -1,0 +1,1 @@
+git remote remove gitlab & git remote add gitlab https://gitlab.com/okeeper/okeeper.gitlab.io.git & hexo g & hexo d & git add . & git commit -m "$1" & git push gitlab master
