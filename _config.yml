@@ -111,13 +111,13 @@ theme: matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
-#- type: git
-#  repository: https://github.com/okeeper/okeeper.github.io.git
-#  branch: master
-## - type: coding
-##   repository: https://git.coding.net/okeeper/okeeper.github.io.git
-##   branch: master
+deploy:
+- type: git
+  repository: https://github.com/okeeper/okeeper.github.io.git
+  branch: master
+- type: coding
+  repository: https://e.coding.net/okeeper/okeeper.coding.net.git
+  branch: master
 #- type: baidu_url_submitter
 
 
