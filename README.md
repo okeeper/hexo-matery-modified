@@ -43,6 +43,7 @@ hexo s
 
 ## 3. 修改配置`_config.yml`
 ```properties
+如果希望在部署的时候直接推送到github，这里配置一下github的地址
 # 修改git配置，当执行 `hexo d` 时, 将自动提交到这个git地址
 deploy:
 - type: git
