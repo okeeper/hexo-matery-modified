@@ -48,6 +48,21 @@ tags:
 npm config set registry https://registry.npm.taobao.org
 ```
 
+### 2.2 安装hexo
+```
+npm i hexo-cli -g
+hexo -v
+hexo init
+
+# 安装必要组件
+npm install
+
+# 生成静态文件
+hexo g
+#启动服务器
+hexo s
+```
+
 ## 3. 修改配置`_config.yml`
 ```properties
 # 修改git配置，当执行 `hexo d` 时, 将自动提交到这个git地址

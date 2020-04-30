@@ -115,9 +115,9 @@ deploy:
 - type: git
   repository: https://github.com/okeeper/okeeper.github.io.git
   branch: master
-- type: coding
-  repository: https://e.coding.net/okeeper/okeeper.coding.net.git
-  branch: master
+#- type: coding
+#  repository: https://e.coding.net/okeeper/okeeper.coding.net.git
+#  branch: master
 #- type: baidu_url_submitter
 
 
