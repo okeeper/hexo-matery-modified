@@ -6,9 +6,11 @@ pages:
     paths:
       - node_modules/
   script:
-    - npm install hexo-cli -g
+    #- npm install hexo-cli -g
+    - npm install hexo
     - npm install
     - hexo g #生成静态文件
+    - hexo -v
     - hexo d #部署
   artifacts:
     paths:
