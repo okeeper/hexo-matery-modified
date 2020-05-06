@@ -16,9 +16,9 @@ menu:
   About:
     url: /about
     icon: fa-user-circle-o
-  Friends:
-    url: /friends
-    icon: fa-users
+#  Friends:
+#    url: /friends
+#    icon: fa-users
   Contact:
     url: /contact
     icon: fa-address-book
