@@ -1,3 +1,14 @@
+---
+title: Java bean的Getter Setter 自动编译生成工具Lombok
+date: 2022-08-26 15:54:13
+author: okeeper
+top: false
+toc: true
+categories: 软件笔记
+tags:
+  - 软件笔记
+---
+
 ## 背景
 
   我们在开发过程中，通常都会定义大量的JavaBean，然后通过IDE去生成其属性的构造器、getter、setter、equals、hashcode、toString方法，当要对某个属性进行改变时，比如命名、类型等，都需要重新去生成上面提到的这些方法，那Java中有没有一种方式能够避免这种重复的劳动呢？答案是有，lombok插件

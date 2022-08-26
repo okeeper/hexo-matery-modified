@@ -1,3 +1,14 @@
+---
+title: 靠谱的maven仓库地址
+date: 2022-08-26 15:54:13
+author: okeeper
+top: false
+toc: true
+categories: 软件笔记
+tags:
+  - 软件笔记
+---
+
 ```
 
 #阿里云maven

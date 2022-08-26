@@ -1,3 +1,14 @@
+---
+title: 使用Maven命令指定上传打包到私库
+date: 2022-08-26 15:54:13
+author: okeeper
+top: false
+toc: true
+categories: 软件笔记
+tags:
+  - 软件笔记
+---
+
 我们一般在pom.xml中加入`distributionManagement`
 ```
 <distributionManagement>

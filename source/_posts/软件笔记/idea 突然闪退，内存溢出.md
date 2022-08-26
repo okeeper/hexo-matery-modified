@@ -1,3 +1,14 @@
+---
+title: idea 突然闪退，内存溢出
+date: 2022-08-26 15:54:13
+author: okeeper
+top: false
+toc: true
+categories: 软件笔记
+tags:
+  - 软件笔记
+---
+
 解决办法：到安装路径C:\Program Files (x86)\JetBrains\IntelliJ IDEA 15.0.4\bin
 找到idea.exe.vmoptions配置修改Xmx 为合适大小1024/2048，然后启动此路径下的idea.exe
 ```
