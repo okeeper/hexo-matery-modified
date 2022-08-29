@@ -275,8 +275,8 @@ livere:
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: true
-  appId: STBldAQJtVSJkhjqcYgjtmPL-gzGzoHsz
-  appKey: FnIMnsXhTkXVXQuzykLukEgQ
+  appId: GjiqQwhojXYm2W20KjDDlk19-9Nh9j0Va
+  appKey: w8fOuluBKT5D5LiCnhlLRRpY
   notify: false
   verify: false
   visitor: false
@@ -313,7 +313,7 @@ busuanziStatistics:
 # 添加 Google Analytics 配置
 googleAnalytics:
   enable: true
-  id: 
+  id: G-9PRXGJ8X9Z
 
 # The used front-end library can be replaced with the corresponding CDN address as needed,
 # If the specific version is not specified below, you can use the latest version.
@@ -341,7 +341,7 @@ libs:
     explosion: /libs/others/explosion.min.js
     firework: /libs/others/firework.js
     text: /libs/others/text.js
-    busuanzi: /libs/others/busuanzi.pure.mini.js
+    busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
     dplayer: /libs/dplayer/DPlayer.min.js
     crypto: /libs/cryptojs/crypto-js.min.js
