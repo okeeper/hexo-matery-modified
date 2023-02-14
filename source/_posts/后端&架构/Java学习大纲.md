@@ -13,7 +13,7 @@ tags:
 
 在线预览地址：[http://naotu.baidu.com/file/a94181bfafe64d39874b524ce8df18c1?token=a8efb35e029a526f](http://naotu.baidu.com/file/a94181bfafe64d39874b524ce8df18c1?token=a8efb35e029a526f)
 
-![](../images/Java学习大纲/getImage-20220825184207294.png)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825184207294.png)
 
 
 来自网络的架构师大纲图：

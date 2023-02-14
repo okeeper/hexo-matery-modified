@@ -161,13 +161,13 @@ docker-compose -f ./docker-compose.yml up d
 ```
 http://localhost:9200/_cat/health?v
 ```
-![](https://leanote.com/api/file/getImage?fileId=61d832d4ab644142b460789c)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20230213222744486.png)
 
 ## 查看集群健康状态
 ```
 http://localhost:9200/_cluster/health?pretty
 ```
-![](../images/docker ES安装/getImage-20220825184627531.png)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825184627531.png)
 
 ## 查询分片状态
 ```

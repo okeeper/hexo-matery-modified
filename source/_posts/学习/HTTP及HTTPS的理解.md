@@ -21,10 +21,10 @@ HTTP全称叫超文本传输协议(HyperText Transfer Protocol),是用于WWW(万
 所以说TCP/IP是传输协议的上下层关系。
 ## 关于HTTP
 而HTTP则是在TCP/IP基础上的进一步封装的协议，属于应用层协议.网络传输的协议关系图如下：
-![](../images/HTTP及HTTPS的理解/getImage-20220825184529465.png)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825184529465.png)
 
 网络传输的协议，两边刚好是相反的:
-![](../images/HTTP及HTTPS的理解/getImage-20220825184529221.png)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825184529221.png)
 ## HTTP原理
 HTTP请求主要分为以下几个步奏：
 1. 域名解析，查找对应DNS服务器域名解析找到对应的IP
@@ -46,7 +46,7 @@ HTTP请求主要分为以下几个步奏：
 例如下图：
 readTimeout设为6s,socketTimeout设为4秒，发送http报文之后响应
 时间超时为6s,响应内容abc分三次socket传输,每次间隔超时时间为4s，所以总共花费6s是不会抛出`socket timeout`
-![](../images/HTTP及HTTPS的理解/getImage-20220825184529343.png)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825184529343.png)
 
 ## JAVA中使用http
 Java 访问http通过
@@ -57,7 +57,7 @@ HTTPS简单的说就是，http的安全版
 
 ## HTTPS基本原理
 
-![](../images/HTTP及HTTPS的理解/getImage-20220825184528912.png)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825184528912.png)
 
 过程大致如下：
 1. SSL客户端通过TCP和服务器建立连接之后（443端口），并且在一般的tcp连接协商（握手）过程中请求证书。

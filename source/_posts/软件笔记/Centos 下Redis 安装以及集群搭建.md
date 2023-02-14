@@ -78,7 +78,7 @@ root     28036 18197  0 13:48 pts/0    00:00:00 grep --color=auto redis
 #查看端口监听
 netstat -tnlp | grep redis
 ```
-![](https://leanote.com/api/file/getImage?fileId=58b6679aab64410ab8008a0f)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage.png)
 
 7.将redis节点加入集群
 ```
@@ -92,7 +92,7 @@ yum -y install ruby ruby-devel rubygems rpm-build
 gem install redis
 ```
 重新运行命令如果出现以下图片则表示集群安装成功，记得中途还需输入yes
-![](https://leanote.com/api/file/getImage?fileId=58b6679aab64410ab8008a0d)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20230213222704158.png)
 
 8.集群验证
 简单说下redis集群的原理：
@@ -108,9 +108,9 @@ Redis 集群会把数据存在一个 master 节点，然后在这个 master 和�
 ```
 redis-cli -h 192.168.10.10 -c -p 7002
 ```
-![](https://leanote.com/api/file/getImage?fileId=58b6679aab64410ab8008a10)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20230213222711977.png)
 
-![](https://leanote.com/api/file/getImage?fileId=58b6679aab64410ab8008a0e)
+![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20230213222715529.png)
 
 到此安装完成。
 

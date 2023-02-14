@@ -24,10 +24,10 @@ npm config set registry https://registry.npm.taobao.org
 # 新建一个Hello World只能合约的访问
 1. 使用IDEA安装nodejs插件，在插件列表搜索
 2. 新建一个node工程项目，File>New Project 选择Node.js and NPM
- ![](../images/未命名/getImage-20220825155544126.png)
- 默认有很多其他的目录，我们删除其他目录，只保留如下的目录：
- ![](../images/未命名/getImage-20220825155543961.png)
- 或者使用`npm init`命令初始化一个nodejs工程
+ ![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825155544126.png)
+  默认有很多其他的目录，我们删除其他目录，只保留如下的目录：
+  ![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825155543961.png)
+  或者使用`npm init`命令初始化一个nodejs工程
 3.  安装solidity编译器依赖，用于编译Solidity，才能被nodejs使用到
 
     ```
@@ -182,7 +182,7 @@ npm config set registry https://registry.npm.taobao.org
     node `Web3Test.test.js
     ```
     运行结果：
-    ![](../images/未命名/getImage-20220825155544126-1414144.png)
+    ![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825155544126-1414144.png)
 
 # 将代码提交到以太坊rankeby测试网络
 1. 安装truffle-hdwallet-provider
@@ -251,7 +251,7 @@ npm config set registry https://registry.npm.taobao.org
     node EtherOnlieRinkebyTest.test.js
     ```
     输出结果如下：
-    ![](../images/未命名/getImage-20220825155544225.png)
+    ![](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/getImage-20220825155544225.png)
 
 到此从开发到上传到访问以太坊rinkeby测试网络已经完成。
 

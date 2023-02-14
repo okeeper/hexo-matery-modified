@@ -17,7 +17,7 @@ tags:
 
 2. 安装v2ray服务端，有一键安装脚本，傻瓜式安装，安装时如果用的是shadowrocket客户端方式连接，安装时询问时这一步选择是即可
 
-   ![img](../images/自行搭建v2ray科学上网工具，支持mac、ios、windows/v2ray一键安装6.png)
+   ![img](https://okeeper-blog-images.oss-cn-hangzhou.aliyuncs.com/images/v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%856.png)
 
 详细步骤参考网上文章进行一键安装：
 
