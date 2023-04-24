@@ -209,3 +209,7 @@ tags:
 - 截图直接粘贴生成图片存入指定目录，设置见文件->偏好设置>图像>路径配置 可以结合PicGo + aliyun oss进行在线上传，参考：(https://blog.csdn.net/qq_40449773/article/details/121570688)
 - 简洁并支持主题自定义
 - 开源免费
+
+# 报错集锦
+
+https://blog.csdn.net/qq_37350725/article/details/113602064
