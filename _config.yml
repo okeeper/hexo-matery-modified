@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 张跃的博客
-subtitle: Okeeper
-description: 张跃 | 软件工程 | Java老司机
-keywords: "张跃 zhangyue okeeper Java Alibaba"
-author: 张跃
+title: 神笔君|Okeeper
+subtitle: 神笔君|Okeeper
+description: 张跃 | 软件工程 | 架构师 | 软件笔记 | 技术分享 | 观点 | 随笔
+keywords: "张跃 zhangyue okeeper Java Alibaba 软件工程 架构师 软件笔记 技术分享 观点 随笔"
+author: Okeeper
 language: zh-CN
 timezone:
 
