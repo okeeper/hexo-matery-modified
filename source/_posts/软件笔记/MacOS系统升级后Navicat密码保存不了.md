@@ -6,11 +6,11 @@ top: true
 toc: true
 mathjax: false
 summary: macOS升级高版本系统后Navicat 15或16版本会出现无法保存数据库密码问题，报"AIled to save password error code -34018",每次重启都要重新编辑连接输入数据库密码，超级崩溃
-categories: Navicat
+categories: 软件笔记
 tags:
   - Navicat
   - MacOS
-  - 软件
+  - 软件笔记
 ---
 
 

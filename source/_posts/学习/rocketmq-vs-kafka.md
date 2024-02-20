@@ -4,6 +4,7 @@ date: 2019-07-13 11:25:00
 author: okeeper
 top: true
 toc: true
+cover: true
 mathjax: false
 summary: RokectMQ 和Kafka的优缺点对比
 categories: RocketMQ

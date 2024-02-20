@@ -4,9 +4,10 @@ date: 2023-04-24 11:25:00
 author: okeeper
 top: true
 toc: true
+cover: true
 mathjax: false
 summary: 通用大语言模型介绍、本地部署及微调
-categories: RocketMQ
+categories: 人工智能
 tags:
   - AI
   - LLama

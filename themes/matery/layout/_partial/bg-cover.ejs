@@ -3,3 +3,10 @@
     <%- partial('_partial/bg-cover-content') %>
     </div>
 </div>
+
+<script>
+// 每天切换 banner 图.  Switch banner image every day.
+//(new Date().getDate() % 28)
+//parseInt(Math.random() * 28)
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + parseInt(Math.random() * 28)+ '.jpg)');
+</script>
