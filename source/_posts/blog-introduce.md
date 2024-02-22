@@ -5,7 +5,6 @@ author: okeeper
 img: /images/1.jpg
 top: true
 cover: true
-coverImg: /images/14.jpg
 toc: true
 mathjax: false
 summary: 博客第一篇，介绍博客搭建的过程
@@ -82,6 +81,33 @@ deploy:
 # 编译source目录下的文章生成public静态文件
 hexo g
 # 提交到你的blog仓库
+hexo d
+```
+> hexo部署到github时，提示typeError [ERR_INVALID_ARG_TYPE]: The “mode“ argument must be integer. Receive…
+> 出现这个问题的原因是node版本较高
+
+> 解决方法
+```
+$ hexo -v
+hexo: 3.9.0
+hexo-cli: 4.3.0
+os: darwin 22.3.0 13.2.1
+
+node: 21.1.0
+acorn: 8.10.0
+```
+hexo 版本才3.9.0,
+
+而node 版本已经是14.17.5了
+
+更换版本
+使用nvm命令
+```
+查看可用node版本
+nvm list
+#使用低版本的node
+nvm use v12.14.0
+# 再试一下hexo d
 hexo d
 ```
 

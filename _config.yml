@@ -145,3 +145,14 @@ baidu_url_submit:
   host: okeeper.com
   token: 
   path: baidu_urls.txt
+
+
+# 开启数学公式渲染
+markdown_it_plus:
+  plugins:
+    - plugin:
+      name: '@iktakahiro/markdown-it-katex'
+      enable: false
+    - plugin:
+      name: '@andatoshiki/markdown-it-katex'
+      enable: false
