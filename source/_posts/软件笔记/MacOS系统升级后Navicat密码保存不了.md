@@ -1,9 +1,9 @@
 ---
-title: MacOS系统升级后Navicat密码保存不了，报"AIled to save password error code -34018"
+title: MacOS系统升级后Navicat密码保存不了问题
 date: 2024-02-19 15:25:00
 author: okeeper
-top: true
-toc: true
+top: false
+toc: false
 mathjax: false
 summary: macOS升级高版本系统后Navicat 15或16版本会出现无法保存数据库密码问题，报"AIled to save password error code -34018",每次重启都要重新编辑连接输入数据库密码，超级崩溃
 categories: 软件笔记
