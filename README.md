@@ -31,6 +31,9 @@
 如果没有梯子的话，可以使用阿里的国内镜像进行加速。
 ```
 npm config set registry https://registry.npm.taobao.org
+
+npm set registry https://mirrors.huaweicloud.com/repository/npm
+
 ```
 
 ### 2.2 安装hexo
@@ -77,6 +80,166 @@ hexo g
 # 提交到你的blog仓库
 hexo d
 ```
+
+## hexo报错
+### 1. s wrong. Maybe you can find the solution here
+```shell
+FATAL Something's wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
+TypeError [ERR_INVALID_ARG_TYPE]: The "mode" argument must be of type number. Received an instance of Object
+    at copyFile (node:fs:2985:10)
+    at go$copyFile (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/graceful-fs/graceful-fs.js:181:14)
+    at copyFile (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/graceful-fs/graceful-fs.js:178:12)
+    at promisified (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promisify.js:223:16)
+    at /Users/yue/IdeaProjects/hexo-matery-modified/node_modules/hexo-fs/lib/fs.js:144:39
+    at tryCatcher (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:729:18)
+    at Promise._fulfill (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:673:18)
+    at Promise._resolveCallback (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:466:57)
+    at Promise._settlePromiseFromHandler (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:559:17)
+    at Promise._settlePromise (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:729:18)
+    at Promise._fulfill (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:673:18)
+
+```
+解决：切换node版本为12，nvm的安装和使用见下面文档
+
+### 2. 如果遇到使用`npm install`时，明明指定了仓库地址，但任然没有试用指定的仓库地址进行下载，导致报错。
+解决：
+当你使用 `npm install --registry=<registry_url>` 指定仓库地址时，有些依赖包仍然可能不会从指定的仓库地址下载。这通常是由于以下几个原因：
+
+1. **Scoped Packages**: 有些包是 "scoped packages"，即包名以 `@` 开头。这些包可能有自己的配置项。如果这些包的配置项指定了不同的仓库地址，就会忽略你全局或临时指定的仓库地址。
+
+2. **Package Lock File (`package-lock.json`)**: `package-lock.json` 文件可能会锁定某些包的来源。如果你的 `package-lock.json` 文件中记录了特定版本的包从特定的仓库下载，即使你指定了新的仓库地址，npm 仍会尝试从原来的地址下载包。
+
+3. **npm Configuration Files (`.npmrc`)**: 本地或项目目录下的 `.npmrc` 配置文件可能会覆盖你指定的仓库地址。比如，用户主目录下的 `~/.npmrc` 文件，或者项目目录下的 `.npmrc` 文件中也可以包含不同的仓库地址配置。
+
+4. **Environment Variables**: 环境变量可能会影响 npm 的行为。如果你在环境变量中设置了某些 npm 配置选项，这些选项也可能会覆盖你在命令行中指定的选项。
+
+要确保所有包都从指定的仓库地址下载，可以尝试以下步骤：
+
+1. **检查 `.npmrc` 配置文件**:
+    - 查看和编辑用户主目录下的 `.npmrc` 文件，确保没有冲突的仓库地址配置：
+      ```bash
+      cat ~/.npmrc
+      ```
+    - 查看和编辑项目目录下的 `.npmrc` 文件：
+      ```bash
+      cat ./.npmrc
+      ```
+
+2. **清理 `package-lock.json` 文件**:
+    - 删除 `package-lock.json` 文件和 `node_modules` 目录，然后重新安装依赖：
+      ```bash
+      rm -rf package-lock.json node_modules
+      npm install --registry=<registry_url>
+      ```
+
+3. **确保 Scoped Packages 的正确配置**:
+    - 如果你使用了 scoped packages，需要确保 scoped packages 的配置也指向正确的仓库地址。例如：
+      ```bash
+      npm config set @your-scope:registry <registry_url>
+      ```
+
+通过这些步骤，你可以更好地控制 npm 的行为，确保所有依赖包从指定的仓库地址下载。
+
+# nvm的安装和使用
+使用 `nvm`（Node Version Manager）可以方便地管理和切换多个版本的 Node.js。以下是如何安装和使用 `nvm` 来管理 Node.js 版本的步骤：
+
+### 1. 安装 `nvm`
+首先，你需要安装 `nvm`。你可以通过以下命令来安装：
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+
+或者：
+
+```bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+
+安装完成后，重新加载你的 shell 配置文件（如 `.bashrc`、`.bash_profile`、`.zshrc` 等）：
+
+```bash
+source ~/.bashrc
+```
+
+### 2. 验证安装
+运行以下命令验证 `nvm` 是否安装成功：
+
+```bash
+nvm --version
+```
+
+### 3. 安装 Node.js 版本
+使用 `nvm` 安装你需要的 Node.js 版本。例如，安装最新的 LTS 版本：
+
+```bash
+nvm install --lts
+```
+
+安装特定版本的 Node.js：
+
+```bash
+nvm install 14.17.0
+```
+
+### 4. 切换 Node.js 版本
+切换到特定版本的 Node.js：
+
+```bash
+nvm use 14.17.0
+```
+
+使用最新的 LTS 版本：
+
+```bash
+nvm use --lts
+```
+
+### 5. 设置默认版本
+设置一个默认的 Node.js 版本，这个版本会在新终端窗口中自动使用：
+
+```bash
+nvm alias default 14.17.0
+```
+
+### 6. 列出已安装的版本
+查看你已经安装的 Node.js 版本：
+
+```bash
+nvm ls
+```
+
+### 7. 列出可安装的版本
+查看所有可安装的 Node.js 版本：
+
+```bash
+nvm ls-remote
+```
+
+### 8. 卸载 Node.js 版本
+如果你不再需要某个版本，可以使用以下命令卸载它：
+
+```bash
+nvm uninstall 14.17.0
+```
+
+### 例子
+假设你需要安装 Node.js 的最新 LTS 版本，并设置它为默认版本：
+
+```bash
+nvm install --lts
+nvm alias default lts/*
+```
+
+这样，当你打开一个新的终端窗口时，`nvm` 会自动使用最新的 LTS 版本。
+
+通过这些步骤，你可以轻松管理和切换多个 Node.js 版本，确保你的开发环境始终满足项目需求。
 
 # 个性化
 ### 1. 添加水印
