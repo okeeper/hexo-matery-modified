@@ -2,7 +2,7 @@
 title: Redis为什么快
 date: 2024-05-21
 athor: okeeper
-top: true
+top: false
 cover: true
 toc: true
 mathjax: true

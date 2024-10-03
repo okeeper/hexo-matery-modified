@@ -2,7 +2,7 @@
 title: 通用大语言模型介绍、本地部署及微调
 date: 2023-04-24 11:25:00
 author: okeeper
-top: true
+top: false
 toc: true
 cover: true
 mathjax: false

@@ -11,6 +11,12 @@
 
 <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
 <ul class="right">
+    <li class="hide-on-med-and-down">
+        <a href="http://model-bridge.okeeper.com" target="_blank" class="waves-effect waves-light">
+            <i class="fa fa-book"></i>
+            <span>ModelBridge/魔桥</span>
+        </a>
+    </li>
     <% Object.keys(theme.menu).forEach(function(key) { %>
     <li class="hide-on-med-and-down">
         <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
@@ -21,6 +27,8 @@
         </a>
     </li>
     <% }); %>
+
+
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="<%= __('search') %>"></i>

@@ -3,7 +3,7 @@ title: 博客搭建的介绍
 date: 2018-1-12 09:25:00
 author: okeeper
 img: /images/1.jpg
-top: true
+top: false
 cover: true
 toc: true
 mathjax: false
