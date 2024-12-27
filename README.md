@@ -105,7 +105,7 @@ TypeError [ERR_INVALID_ARG_TYPE]: The "mode" argument must be of type number. Re
     at Promise._fulfill (/Users/yue/IdeaProjects/hexo-matery-modified/node_modules/bluebird/js/release/promise.js:673:18)
 
 ```
-解决：切换node版本为12，nvm的安装和使用见下面文档
+解决：切换node版本为12，nvm的安装和使用见下面文档, ``
 
 ### 2. 如果遇到使用`npm install`时，明明指定了仓库地址，但任然没有试用指定的仓库地址进行下载，导致报错。
 解决：
