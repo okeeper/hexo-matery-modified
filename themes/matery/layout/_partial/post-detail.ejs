@@ -79,7 +79,9 @@
             <hr />
 
             <!-- 公众号图片 -->
-            <img src="/gongzhonghao.png" width="100%"/>
+            <% if (theme.bot_image && theme.bot_image.enable) { %>
+                <img src="<%- theme.bot_image.image %>" width="100%"/>
+            <% } %>
 
             <% if (theme.reward && theme.reward.enable) { %>
             <%- partial('_partial/reward') %>

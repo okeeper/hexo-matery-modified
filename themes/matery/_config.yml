@@ -414,3 +414,7 @@ snow:
 # 激活网页时变换网页标题
 visibilitychange:
   enable: false
+
+bot_image:
+  enable: true
+  image: /gongzhonghao2.png
