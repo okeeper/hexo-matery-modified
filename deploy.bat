@@ -1,1 +1,1 @@
-hexo clean & hexo g & hexo d & git add . & git commit -m "$1" & git push origin master
+sudo hexo clean & sudo hexo g & sudo hexo d & sudo git add . & sudo git commit -m "$1" & sudo  git push origin master
